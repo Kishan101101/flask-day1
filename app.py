@@ -26,6 +26,17 @@ def userdetails():
 def Logout():
       session.pop('user',None)
       return Response('Logged out successfully!')
+@app.route('/studentdetails',methods=['GET'])
+def studentdetails():
+      student={
+            'name':'John Doe',
+            'age':11,
+            'email':'j@gmail.com',
+            'is_Topper':True,
+            'phone':1234567890
+      }
+      return render_template('student.html',student=student)
 
 if __name__ == '__main__':
     app.run(debug=True)
+

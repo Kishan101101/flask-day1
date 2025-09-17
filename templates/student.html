@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Student detail...</h1>
+<h2>{{ student.name }}</h2>
+{% if student.age >= 18 %}
+    <h3>Adult</h3><br>
+{% else %}
+    <h3>Minor</h3><br>
+      {% endif %}
+{% if is_topper %}
+    <h3>You are a Topper</h3><br>
+{%else%}
+    <h3>You are not a Topper</h3><br>
+{% endif %}
+<h3>{{ student.email }}</h3>
+<h3>{{ student.phone }}</h3>
+
+
+</body>
+</html>
